@@ -26,8 +26,8 @@ function Info() {
 function Buttons() {
     return (
         <div className="header-buttons">
-            <button className="email-button"><MdEmail/><a href="mailto:nabera@mcmaster.ca">Email</a></button>
-            <button className="linkedin-button"><FaLinkedin/><a href="https://www.linkedin.com/in/ayed-naber/">LinkedIn</a></button>
+            <button className="email-button" onClick={(e) => {e.preventDefault(); window.open('mailto:nabera@mcmaster.ca', '__blank')}}><MdEmail/><a>Email</a></button>
+            <button className="linkedin-button" onClick={(e) => {e.preventDefault(); window.open('https://www.linkedin.com/in/ayed-naber/', '__blank')}}><FaLinkedin/><a>LinkedIn</a></button>
         </div>
     )
 }

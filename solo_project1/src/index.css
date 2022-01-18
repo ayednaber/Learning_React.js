@@ -15,7 +15,7 @@ code {
 
 .app {
   background-color: #4e5561;
-  width: 27.2%;
+  width: 24.7%;
   margin: auto;
   margin-top: 20px;
   border-radius: 20px;
@@ -90,6 +90,33 @@ code {
   margin-left: 10px;
   font-weight: 500;
   font-size: 15px;
+}
+
+.about-section {
+  margin: auto;
+  width: 330px;
+}
+
+.about-section h2 {
+  color: white;
+}
+
+.about-section p {
+  color: white;
+}
+
+.interests-section {
+  margin: auto;
+  width: 330px;
+  padding-bottom: 20px;
+}
+
+.interests-section h2 {
+  color: white;
+}
+
+.interests-section p {
+  color: white;
 }
 
 
