@@ -29,3 +29,39 @@ nav {
 .hero-header {
   margin-bottom: 16px;
 }
+
+.card {
+  width: 175px;
+  font-size: 12px;
+}
+
+.card-img {
+  width: 100%;
+}
+
+.card-section {
+  display: flex;
+}
+
+.star-img {
+  align-self: center;
+  width: auto;
+  margin-right: 5px;
+  height: 14px;
+}
+
+.card-review-count {
+  /* margin-right: 7px; */
+  /* margin-left: 7px; */
+  color: #918E8b;
+}
+
+.country {
+  /* margin-right: 7px; */
+  /* margin-left: 7px; */
+  color: #918E8b;
+}
+
+.price {
+  font-weight: bold;
+}
