@@ -2,22 +2,8 @@ import React from "react"
 import ReactDOM from "react-dom"
 // Importing our Header from its own file now
 import Header from "./Header"
-
-function OrderedList() {
-  return (
-    <ol>
-                <li>It is a skill that is in-demand.</li>
-                <li>It allows me to create websites and applications with greater flexibility than Vanilla JavaScript</li>
-                <li>I love learning new skills</li>
-            </ol>
-  )
-}
-
-function Footer() {
-  return (
-    <footer> 2022 Ayed Naber. All rights reserved</footer>
-  )
-}
+import OrderedList from "./OrderedList"
+import Footer from "./Footer"
 
 // Notice here how we are using the components defined above inside here. This is an example of the composability that we have access to in React.
 function Reason() {
