@@ -1,10 +1,29 @@
-# Getting Started with Create React App
+# Building an Airbnb Experiences Clone
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This Airbnb experiences clone is made up of several components. Firstly, we have the navbar, which just contains the Airbnb logo placed on the left hand side. 
 
-## Available Scripts
+Also, we designed the hero section, which contains a photo grid, along with a title and paragraph under it.
 
-In the project directory, you can run:
+Now, below the hero section, we will have card components, showing our different experiences.
+For this one, at first, we did much like we have been learning in the previous few projects, where we are creating a Card component, and exporting it and placing it in the App.js file. However, in real life, anything that has a list of images and titles (for example, movies on IMDB, YouTube Videos on the homepage, etc..) will not be hard-coded, but is **data driven**.
+
+Therefore, to achieve this, we will learn about the concept of **Props**.
+
+To understand the concept of **props** better, let us think about an `<a>` field in HTML. It is meaningless without the `href`. The same goes for an `<img>`, it is useless without the `src`. Essentially, we need these details in order for these elements to make sense.
+We can look at the same example using JavaScript, if we have a function such as the following:
+
+`function addTwoNumbersTogether() { return 1 + 2 }`
+
+This is a useless function, but if we have parameters in the function,
+we will be able to give it a and b, and it will add the two numbers we gave as input, as opposed to this hard-coded sum which will be the same every time.
+
+This is the same concept that we will be using for Props.
+
+Another analogy:
+See how in the photo of YouTube below, there is no way that a developer goes in and changes the HTML of the front page every time. But most porbably, there is a dynamic component such as VideoTile, which is designed to be flexible enough to take parameters for its thumbnail photo, name, channel name, view count, date, and more.
+
+<img src="images/youtube-props-example.png">
+
 
 ### `npm start`
 
@@ -13,58 +32,3 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
