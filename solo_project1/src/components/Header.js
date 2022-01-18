@@ -18,7 +18,7 @@ function Info() {
         <div className="info-section">
             <h1>Ayed Naber</h1>
             <h3>Frontend Developer</h3>
-            <a href="https://ayednaber.github.io">ayednaber.github.io</a>
+            <a href="https://ayednaber.github.io" target="__blank">ayednaber.github.io</a>
         </div>
     )
 }
