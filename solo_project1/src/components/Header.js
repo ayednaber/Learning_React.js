@@ -2,6 +2,8 @@
 
 import React from "react"
 import personal_photo from "../images/personal_photo.jpg"
+import { FaLinkedin } from "react-icons/fa"
+import { MdEmail } from "react-icons/md"
 
 function ImageContainer() {
     return (
@@ -24,8 +26,8 @@ function Info() {
 function Buttons() {
     return (
         <div className="header-buttons">
-            <button className="email-button">Email</button>
-            <button className="linkedin-button">LinkedIn</button>
+            <button className="email-button"><MdEmail/><a href="mailto:nabera@mcmaster.ca">Email</a></button>
+            <button className="linkedin-button"><FaLinkedin/><a href="https://www.linkedin.com/in/ayed-naber/">LinkedIn</a></button>
         </div>
     )
 }
