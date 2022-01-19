@@ -13,12 +13,12 @@ export default function Card(props) {
             <div className="card-section">
                 <img src={star} className="star-img" />
                 <span className="card-rating">{props.rating}</span>
-                <span className="card-review-count">{props.num_reviews} • </span>
+                <span className="card-review-count">({props.num_reviews}) • </span>
                 <span className="country">{props.country}</span>
             </div>
             <div className="card-title-section">
                 <p className="card-title">{props.title}</p>
-                <p className="card-price"><span className="price">{props.price}</span> / Person</p>
+                <p className="card-price"><span className="price">From ${props.price}</span> / Person</p>
             </div>
         </div>
     )

@@ -25,7 +25,9 @@ function App() {
       <Navbar />
       {/* <Hero /> */}
 
-      {cardElements}
+      <section className="cards-list">
+        {cardElements}
+      </section>
 
       <div className='contacts'>
       {contacts.map(({id, img, name, phone, email}) => (
