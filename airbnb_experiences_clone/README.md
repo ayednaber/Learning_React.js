@@ -20,9 +20,9 @@ we will be able to give it a and b, and it will add the two numbers we gave as i
 This is the same concept that we will be using for Props.
 
 Another analogy:
-See how in the photo of YouTube below, there is no way that a developer goes in and changes the HTML of the front page every time. But most porbably, there is a dynamic component such as VideoTile, which is designed to be flexible enough to take parameters for its thumbnail photo, name, channel name, view count, date, and more.
+For the YouTube home page, there is no way that a developer goes in and changes the HTML of the front page every time. But most porbably, there is a dynamic component such as VideoTile, which is designed to be flexible enough to take parameters for its thumbnail photo, name, channel name, view count, date, and more.
 
-<img src="src/images/youtube-props-example.png">
+<!-- <img src="src/images/youtube-props-example.png"> -->
 
 
 ### `npm start`
