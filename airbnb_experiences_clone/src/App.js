@@ -4,21 +4,29 @@ import Hero from './components/Hero';
 import Card from './components/Card';
 import Contact from './components/Contact';
 import {contacts} from './constants/constants.js';
+import data from './data';
 
 
 function App() {
+  let cardElements = data.map(cardElement => {
+    return (
+    <Card 
+      image={cardElement.coverImg} 
+      rating={cardElement.stats.rating}
+      num_reviews={cardElement.stats.reviewCount}
+      country={cardElement.location}
+      title={cardElement.title}
+      price={cardElement.price}
+    />
+    )
+  })
   return (
     <div>
       <Navbar />
       {/* <Hero /> */}
-      <Card 
-        image='../images/katie.png'
-        rating="5.0"
-        num_reviews={6}
-        country="USA"
-        title="Life Lessons with Katie Zaferes"
-        price="$125"
-      />
+
+      {cardElements}
+
       <div className='contacts'>
       {contacts.map(({id, img, name, phone, email}) => (
       <Contact key={id}
