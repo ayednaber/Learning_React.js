@@ -10,7 +10,8 @@ import data from './data';
 function App() {
   let cardElements = data.map(cardElement => {
     return (
-    <Card 
+    <Card
+      key={cardElement.id}
       image={cardElement.coverImg} 
       rating={cardElement.stats.rating}
       num_reviews={cardElement.stats.reviewCount}
