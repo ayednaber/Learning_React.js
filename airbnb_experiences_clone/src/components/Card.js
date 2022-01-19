@@ -5,19 +5,20 @@ import React from "react";
 import star from '../images/star.png'
 import cardPhoto from '../images/katie.png'
 
-export default function Card() {
+export default function Card(props) {
+    // console.log(props)
     return (
         <div className="card">
-            <img src={cardPhoto} className="card-img" />
+            <img src={props.image} className="card-img" />
             <div className="card-section">
                 <img src={star} className="star-img" />
-                <span className="card-rating">5.0</span>
-                <span className="card-review-count">(6) • </span>
-                <span className="country">USA</span>
+                <span className="card-rating">{props.rating}</span>
+                <span className="card-review-count">{props.num_reviews} • </span>
+                <span className="country">{props.country}</span>
             </div>
             <div className="card-title-section">
-                <p className="card-title">Life Lessons with Katie Zaferes</p>
-                <p className="card-price"><span className="price">From $136</span> / Person</p>
+                <p className="card-title">{props.title}</p>
+                <p className="card-price"><span className="price">{props.price}</span> / Person</p>
             </div>
         </div>
     )

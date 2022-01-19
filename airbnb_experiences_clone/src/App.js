@@ -11,7 +11,14 @@ function App() {
     <div>
       <Navbar />
       {/* <Hero /> */}
-      <Card />
+      <Card 
+        image='../images/katie.png'
+        rating="5.0"
+        num_reviews={6}
+        country="USA"
+        title="Life Lessons with Katie Zaferes"
+        price="$125"
+      />
       <div className='contacts'>
       {contacts.map(({id, img, name, phone, email}) => (
       <Contact key={id}
