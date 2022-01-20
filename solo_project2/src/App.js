@@ -1,8 +1,12 @@
 import Navbar from "./components/Navbar";
+import Location from "./components/Location";
 
 function App() {
   return (
-   <Navbar />
+    <div className="app">
+    <Navbar />
+    <Location />
+   </div>
   )
 }
 

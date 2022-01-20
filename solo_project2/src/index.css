@@ -28,3 +28,47 @@ code {
   color: white;
   margin-left: 10px;
 }
+
+.location-image {
+  max-height: 100%;
+  background-size: 100%;
+  max-width: 100%;
+  border-radius: 20px;
+  width: 180px;
+  height: 300px;
+  object-fit: cover;
+  margin-left: 20px;
+  margin-top: 30px;
+  float: left;
+}
+
+.loc {
+  margin-left: 10px;
+}
+
+.location-point {
+  padding-top: 30px;
+  display: flex;
+  align-items: center;
+  margin-bottom: -20px;
+}
+
+.country-name {
+  letter-spacing: 2px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.google-maps {
+  color: #918E9B;
+}
+
+.location-info {
+  margin-left: 210px;
+}
+
+.hr {
+  margin-top: 100px;
+  margin-left: 40px;
+  margin-right: 40px;
+}
