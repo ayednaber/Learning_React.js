@@ -15,9 +15,10 @@ function App() {
       image={cardElement.coverImg} 
       rating={cardElement.stats.rating}
       num_reviews={cardElement.stats.reviewCount}
-      country={cardElement.location}
+      location={cardElement.location}
       title={cardElement.title}
       price={cardElement.price}
+      openSpots={cardElement.openSpots}
     />
     )
   })

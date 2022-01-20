@@ -24,6 +24,11 @@ For the YouTube home page, there is no way that a developer goes in and changes 
 
 At first, our Card component was hard-coded, but now we will start using props in it to make it more dynamic.
 
+### Conditional Rendering
+
+In our `data.js` file, we have a field called `openSpots`, and based on that, we can set if our cards are sold out, or they are still available,
+or whatever the case may be. We can easily do this with the power of React. This is illustrated in `App.js`, where we get the openSpots field from our card data, and based on it, we perform conditional rendering of elements.
+
 
 ### `npm start`
 

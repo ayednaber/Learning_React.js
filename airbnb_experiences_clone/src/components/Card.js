@@ -7,14 +7,21 @@ import cardPhoto from '../images/katie.png'
 
 export default function Card(props) {
     // console.log(props)
+    let badgeText
+    if (props.openSpots === 0) {
+        badgeText = "SOLD OUT"
+    } else if (props.location === "Online") {
+        badgeText = "ONLINE"
+    }
     return (
         <div className="card">
+            {badgeText && <div className="card-badge">{badgeText}</div>}
             <img src={props.image} className="card-img" />
             <div className="card-section">
                 <img src={star} className="star-img" />
                 <span className="card-rating">{props.rating}</span>
                 <span className="card-review-count">({props.num_reviews}) • </span>
-                <span className="country">{props.country}</span>
+                <span className="country">{props.location}</span>
             </div>
             <div className="card-title-section">
                 <p className="card-title">{props.title}</p>
