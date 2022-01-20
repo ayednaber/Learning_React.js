@@ -32,6 +32,8 @@ or whatever the case may be. We can easily do this with the power of React. This
 After a while, our card component has become lengthy, so instead of passing each element from our cardElement, we instead pass the whole cardElemenet. Now, our code has become cleaner, however, we need to change the code in order to match this change.
 The way this change happens, is for example, before it was `props.image`, where image is a custom name by us. However, once we use `props.cardElement.coverImg`, see how we use coverImg instead, and this is because once we pass in the whole cardElement as a value, then we abide by the namings inside of the data.
 
+We can also use `{...cardElement}`. If we use that, then we do not need to use `{props.cardElement.title}`, but we can use `{props.title}`, like we used before. This is a widely used syntax in React, and it is important to keep at the back of your head.
+
 
 ### `npm start`
 
