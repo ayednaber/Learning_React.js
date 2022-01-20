@@ -57,6 +57,7 @@ code {
   letter-spacing: 2px;
   margin-left: 10px;
   margin-right: 10px;
+  text-transform: uppercase;
 }
 
 .google-maps {
