@@ -1,9 +1,8 @@
-import logo from './logo.svg';
-import './App.css';
+import Navbar from "./components/Navbar";
 
 function App() {
   return (
-   <h1>Creating App</h1> 
+   <Navbar />
   )
 }
 
