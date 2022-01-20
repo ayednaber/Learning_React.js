@@ -28,6 +28,16 @@ export default [
         endDate: "18 Nov, 2021",
         description: "The Geiranger Fjord is a fjord in the Sunnmøre region of Møre og Romsdal county, Norway. It is located entirely in the Stranda Municipality.",
         imageUrl: "https://images.unsplash.com/photo-1601439678777-b2b3c56fa627?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
+    },
+    {
+        id: 4,
+        title: "Amman Citadel",
+        googleMapsUrl: "https://goo.gl/maps/RrGfaa4cdH44gvsL7",
+        location: "Jordan",
+        startDate: "05 Feb, 2022",
+        endDate: "10 Feb, 2022",
+        description: "Located in the heart of Amman, this is a must-see.",
+        imageUrl: "https://www.planetware.com/wpimages/2020/03/jordan-amman-top-things-to-do-explore-ammand-citadel.jpg"
     }
 
 ]
