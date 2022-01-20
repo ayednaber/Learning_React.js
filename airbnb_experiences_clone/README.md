@@ -29,6 +29,9 @@ At first, our Card component was hard-coded, but now we will start using props i
 In our `data.js` file, we have a field called `openSpots`, and based on that, we can set if our cards are sold out, or they are still available,
 or whatever the case may be. We can easily do this with the power of React. This is illustrated in `App.js`, where we get the openSpots field from our card data, and based on it, we perform conditional rendering of elements.
 
+After a while, our card component has become lengthy, so instead of passing each element from our cardElement, we instead pass the whole cardElemenet. Now, our code has become cleaner, however, we need to change the code in order to match this change.
+The way this change happens, is for example, before it was `props.image`, where image is a custom name by us. However, once we use `props.cardElement.coverImg`, see how we use coverImg instead, and this is because once we pass in the whole cardElement as a value, then we abide by the namings inside of the data.
+
 
 ### `npm start`
 

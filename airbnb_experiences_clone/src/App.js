@@ -12,13 +12,7 @@ function App() {
     return (
     <Card
       key={cardElement.id}
-      image={cardElement.coverImg} 
-      rating={cardElement.stats.rating}
-      num_reviews={cardElement.stats.reviewCount}
-      location={cardElement.location}
-      title={cardElement.title}
-      price={cardElement.price}
-      openSpots={cardElement.openSpots}
+      cardElement={cardElement}
     />
     )
   })
