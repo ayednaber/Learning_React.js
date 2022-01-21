@@ -14,6 +14,26 @@ although this is not recommended as it will clutter up the JSX code, but we can 
 
 It is important that we pass our functions in the onClick without the parantheses. If we include the parantheses, then the function will be ran every time we save, but not where we actually want it to run.
 
+Example of onClick event listener in React to get random image URL from data when the button is clicked:
+```
+export default function Form() {
+    function getRandomURL() {
+        const memes = memesData.data.memes
+        let randomEntry = memes[Math.floor(Math.random()*memes.length)]
+        console.log(randomEntry.url)
+    }
+    return (
+        <div className="meme-form">
+            <div className="input-text">
+                <input type="text" className="top-text" placeholder="Enter top text..."/>
+                <input type="text" className="bottom-text" placeholder="Enter bottom text..."/>
+            </div>
+            <button onClick={getRandomURL} className="get-meme-button">Get a new meme image <FaImage /></button>
+        </div>
+    )
+}
+```
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
