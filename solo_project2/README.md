@@ -1,8 +1,9 @@
-# Getting Started with Create React App
+## Solo Project 2 - Travel Journal
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+In this project, I applied my understanding of the concepts of **props** and **mapping data** in order to create a travel journal.
+This travel journal consists of a Location component, which I used props in, in order to feed it the data, where this data contains the image source, title, description, and all the important data which is shown on the page. Also, each piece of data contains an id which identifies it.
 
-## Available Scripts
+After that, the number of location instances rendered on the page is dynamic, and that is determined by the number of data points in `Data.js`.
 
 In the project directory, you can run:
 
