@@ -103,6 +103,9 @@ export default function App() {
     )
 }
 ```
+However, the best practice in React is to change the state using a **callback function**. For example:
+
+`setCount(prevCount => prevCount + 1)`
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
