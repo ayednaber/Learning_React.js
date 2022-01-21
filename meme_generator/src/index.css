@@ -28,3 +28,38 @@ code {
   color: white;
   font-family: 'Montserrat';
 }
+
+.meme-form {
+  padding: 30px;
+}
+.input-text {
+  display: flex;
+  align-items: center;
+}
+
+
+.bottom-text, .top-text {
+  padding: 10px;
+  border-radius: 10px;
+  margin-right: 20px;
+  width: 100%;
+  border: 2px solid #757475;
+}
+
+.bottom-text:active, .top-text:active {
+  border: 2px solid black;
+}
+
+.get-meme-button {
+  padding: 15px;
+  border-radius: 20px;
+  margin-top: 20px;
+  width: 100%;
+  font-family: 'Montserrat';
+  font-weight: 700;
+  background: linear-gradient(90.41deg, #711F8D 1.14%, #A818DA 100%);
+  color: white;
+  cursor: pointer;
+;
+
+}

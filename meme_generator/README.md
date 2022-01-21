@@ -1,4 +1,18 @@
-# Getting Started with Create React App
+# Meme Generator - Project 3 in React Course
+
+In this project, we will make the transition from building ordinary static web pages to **dynamic web apps**. Most useful websites on the internet are dynamic web apps and allow for user interaction with the content on the page.
+
+Therefore, to learn about this concept, I will be creating a meme generator, which uses event listeners and states in order to create a meme. The meme picture itself will be fetched from an **API**.
+
+The way we are used to seeing event listeners in Vanilla JavaScript is one of two ways, either we have an `onclick` inside our HTML element, and in it we specify a name of a function, or in the `js` file, we call `.addEventListener("click", ...)`, where click can be changed to any other action, and the three dots would represent a function, that contains the code of what should happen to the element.
+
+Since we are using React here, then we can say for example:
+`<button onClick={function() {}}>Click Me</button>`
+
+Notice how we can stuff JavaScript functions inside the onClick,
+although this is not recommended as it will clutter up the JSX code, but we can always define our functions above the return statement, and then place them in the onClick, or onMouseOver, or any of the attributes available through JSX.
+
+It is important that we pass our functions in the onClick without the parantheses. If we include the parantheses, then the function will be ran every time we save, but not where we actually want it to run.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
