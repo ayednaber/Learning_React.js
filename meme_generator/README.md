@@ -34,6 +34,30 @@ export default function Form() {
 }
 ```
 
+As for the below block of code, every time we click the button, a new element is added to the thingsArray. However, the main problem with this is that it is not updating thingsElements. It is not updating the paragraphs on the screen. In Vanilla JavaScript, we would need to select each element using `getElementById`, but in React, it is a **declarative** language, and that is a major benefit of using this JavaScript library.
+In order to add another `<p>` element each time we click the button, we need to use **States**. We can think of this as selecting the heart icon on a recipe and it is saved for us for the next time that we visit that website. Something like that
+```
+function App() {
+    const thingsArray = ["Thing 1", "Thing 2"]
+    const thingsElements = thingsArray.map(thing => <p key={thing}>{thing}</p>)
+    
+    function addNewElementToArray() {
+        let currentItemNum = thingsArray.length + 1;
+        let itemName = "Thing " + currentItemNum;
+        thingsArray.push(itemName)
+        console.log(thingsArray)
+    }
+    
+    return (
+        <div>
+            <button onClick={addNewElementToArray}>Add Item</button>
+            {thingsElements}
+            
+        </div>
+    )
+}
+```
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
