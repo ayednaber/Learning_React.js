@@ -58,7 +58,7 @@ function App() {
 }
 ```
 
-#### States in React
+## States in React
 States are part of the React library, and we can access them like so. Let's say that we declare this variable as our use state.
 `const result = React.useState()`
 
@@ -122,6 +122,44 @@ const [thingsArray, setThingsArray] = React.useState(["Thing 1", "Thing 2"])
 
 Notice in the above code how we are using the `...prevThingsArray`. This syntax in ES6 is really important, because we cannot directly modify our state by saying `thingsArray.push()`, or even directly modify our parameter to the callback function by saying `prevThingsArray.push()`. Therefore, we use the syntax that we specified above, and this will add a new item to the array.
 
+
+### Another Important Point
+If we are storing an **object** in a useState that looks like this:
+
+```
+const [contact, setContact] = React.useState({
+        firstName: "John",
+        lastName: "Doe",
+        phone: "+1 (719) 555-1212",
+        email: "itsmyrealname@example.com",
+        isFavorite: true
+    })
+```
+
+And we are trying to update only the `isFavorite` property, then if we put the code below, then it will remove all previous properties and update just the isFavorite property, leaving our object with just one property:
+
+```
+function toggleFavorite() {
+        setContact(prevContact => {
+            return {
+                isFavorite: !prevContact.isFavorite
+            }
+        })
+    }
+```
+
+Instead, we should add the following line `...prevContact` with a comma, to signify that we are importing the properties of our previous object, and that we do not want to change that. Our updated code will look like:
+
+```
+function toggleFavorite() {
+        setContact(prevContact => {
+            return {
+                ...prevContact,
+                isFavorite: !prevContact.isFavorite
+            }
+        })
+    }
+```
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
