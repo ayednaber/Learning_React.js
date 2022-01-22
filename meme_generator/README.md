@@ -107,6 +107,22 @@ However, the best practice in React is to change the state using a **callback fu
 
 `setCount(prevCount => prevCount + 1)`
 
+If we have for example an array stored in state, and our updateFunction in the useState does not do what we want, we can always think of our callback function. We give our callback function a parameter, which is the previous value of state, and then we update it however we want.
+
+```
+const [thingsArray, setThingsArray] = React.useState(["Thing 1", "Thing 2"])
+    
+    function addItem() {
+        // We'll work on this next
+        setThingsArray(prevThingsArray => {
+            return [...prevThingsArray, `Thing ${prevThingsArray.length + 1}`]
+        })
+    }
+```
+
+Notice in the above code how we are using the `...prevThingsArray`. This syntax in ES6 is really important, because we cannot directly modify our state by saying `thingsArray.push()`, or even directly modify our parameter to the callback function by saying `prevThingsArray.push()`. Therefore, we use the syntax that we specified above, and this will add a new item to the array.
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
