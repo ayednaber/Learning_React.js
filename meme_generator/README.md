@@ -161,6 +161,17 @@ function toggleFavorite() {
     }
 ```
 
+## Back to our Meme Generator
+Now that we have learned more about useStates in React, we will apply our knowledge in order to finish our meme generator.
+
+We will do that by turning our state into an object, with the following properties:
+- `topText`
+- `bottomText`
+- `randomImage` -- defaulted to a static URL
+- `allMemeImages` -- defaulted to the memesData array we imported from `memesData.js`
+
+Now our functionality works, as in getting random images when clicking on the button, however, every time we refresh, we get the same image that was assigned due to the static URL. Therefore, we will learn next how to save state (aka pass state as props).
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
