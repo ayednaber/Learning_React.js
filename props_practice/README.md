@@ -1,3 +1,10 @@
+# Props Practice -- Jokes
+
+This simple React application was created at the beginning of this course when learning about using props in React. It renders the jokes using a
+`setup` and `punchline` properties.
+
+Now, in the next section of the course, I am returning to this application to practice **conditional rendering**.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
