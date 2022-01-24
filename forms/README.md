@@ -61,6 +61,15 @@ For radio buttons to be **controlled components**, we cannot use value in the sa
 #### Select Boxes
 For select boxes, the concept is very similar to other inputs, in the sense that we can make them controlled components using the value component. Can check the code to see how it is implemented.
 
+### Submitting the Form
+Now, after all of these inputs, we need to know how we can submit the form in React. The way this is done in HTML is that we have an input of type submit. However in React, we can just use `<button>`.
+Any button inside `<form>` tags in React automatically has the type submit, and we need to specify its type if we want to change it.
+
+Also, hitting the button will trigger the **onSubmit event handler**.
+This is different than methods in HTML such as form method POST or GET, and action someFile.php. Now, this is done in React is using a `handleSubmit()` function, which will be passed through the onSubmit event handler.
+
+Shown in code.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

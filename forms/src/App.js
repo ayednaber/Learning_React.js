@@ -21,6 +21,12 @@ export default function Form() {
     }))
   }
 
+  function handleSubmit(event) {
+    event.preventDefault()
+    // submitToApi(formData)
+    console.log(formData)
+  }
+
   return (
       <form>
           <input
@@ -113,6 +119,9 @@ export default function Form() {
                 <option value="indigo">Indigo</option>
                 <option value="violet">Violet</option>
             </select>
+            <br />
+            <br />
+            <button onSubmit={handleSubmit}>Submit</button>
       </form>
   )
 }
