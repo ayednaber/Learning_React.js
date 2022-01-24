@@ -58,6 +58,9 @@ Much like the same options before, we will use our same `handleChange()` functio
 
 For radio buttons to be **controlled components**, we cannot use value in the same way that we have using it for other inputs, and also, we cannot use checked in the same way, because checked uses booleans. Instead, we use `checked={formData.employment === "unemployed"}`. What is happening in this code is that we are checking if the employment is unemployed, for the radio input of unemployed, and so on for the rest of them.
 
+#### Select Boxes
+For select boxes, the concept is very similar to other inputs, in the sense that we can make them controlled components using the value component. Can check the code to see how it is implemented.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
