@@ -1,3 +1,83 @@
+# Meme Generator (with API)
+This project is a clone of the previous `meme_generator` project, but it will
+be importing the meme images from an API. I decided to include this in a
+separate project to keep the learning points apart, and make this easier to refer to later on.
+
+## Process of Using Data from API
+1- GETting the data (fetch)
+2- Save the data to **state**
+
+If we use this code snippet to import data from a star wars API and save it to the `starWarsData` state, and then we use `JSON.stringify(starWarsData, null, 2)`, then we can render our data on the screen:
+
+```
+fetch("https://swapi.dev/api/people/1")
+    .then(res => res.json())
+    .then(data => setStarWarsData(data))
+```
+But, the problem with this code snippet is we didn't place it in a specific function, but rather inside the App component. If we console log a string, this string will be logged infinite times, and it would be stuck in an infinite loop. This is because we are setting the `setStarWarsData(data)`.
+Every time we set our state to a new value, the component is re-rendered, and
+thus we get a new message in our console log.
+
+We can solve this using **useEffects**.
+
+## Side Effects in React
+React is able to deal with anything inside its scope, but it cannot deal with outside effects. These outside effects can be:
+- localStorage
+- API/database interactions
+- Subscriptions (e.g: web sockets)
+- Syncing 2 internal states together
+- etc.....
+
+Therefore, React gives us a tool to deal with the outside effects called
+`useEffect()`
+
+Instead of putting the fetch request like above, it should be inside a `useEffect`, and we define a function, and we **must provide a second parameter to the useEffect**, and it is called a **dependencies array**.
+What a dependencies array is a set of elements, and if any of these elements change, then the useEffect will run again.
+
+This can be demonstrated using a simple count app, in this simple code snippet:
+
+```
+import React from "react"
+
+export default function App() {
+    const [starWarsData, setStarWarsData] = React.useState({})
+    const [count, setCount] = React.useState(0)
+    
+    console.log("Component rendered")
+    
+    // side effects
+    React.useEffect(function() {
+        console.log("Effect ran")
+        // fetch("https://swapi.dev/api/people/1")
+        //     .then(res => res.json())
+        //     .then(data => console.log(data))
+    }, [count])
+    
+    return (
+        <div>
+            <pre>{JSON.stringify(starWarsData, null, 2)}</pre>
+            <h2>The count is {count}</h2>
+            <button onClick={() => setCount(prevCount => prevCount + 1)}>Add</button>
+        </div>
+    )
+}
+```
+In the above code, whenever we click "Add", then we are updating the count in our state by incrementing it by 1. Notice that we passed count into the dependencies array, so whenever we click add, we get a console log of "Component rendered" and "Effect ran". However, if the dependencies array is empty, then adding will only result in "Component rendered" being console logged.
+
+
+Simple useEffect usage to re-run whenever count updates:
+```
+React.useEffect(() => {
+    console.log("Effect function ran")
+}, [count])
+```
+OR
+```
+React.useEffect(function() {
+    console.log("Effect function ran"), [count]
+})
+```
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
