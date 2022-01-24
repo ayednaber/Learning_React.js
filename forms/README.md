@@ -29,7 +29,7 @@ export default function Form() {
 
 Every time we enter a letter into our input field, we get a console log of the current value in that field. This is the main difference in React.
 
-
+There is a concept called **Controlled components**, which basically means that we update our values in state whenever we hit a keystroke inside one of the inputs. The way this is achieved is by adding a value field in the input, which is equal to the current value stored in the state. This can be shown in the code. 
 
 # Getting Started with Create React App
 
