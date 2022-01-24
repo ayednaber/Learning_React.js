@@ -193,6 +193,10 @@ respectively.
 
 Now, we want to apply the same functionality that we used for handling change here, in the sense that we want to update the value of the top text and bottom text with every keystroke. So we will implement this using a handleChange function and the `onChange` event listener.
 
+## Continuation
+This project now works as intended, but it is working based on local data stored in `memesData.js`. In the real world, we will most probably import data to our web applications using **APIs**. But, I did not want to put the API in this react-app, therefore I migrated this to another application called
+`meme_generator_api`.
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
