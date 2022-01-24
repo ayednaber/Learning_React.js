@@ -12,6 +12,12 @@ export default function Form() {
         allMemeImages: memesData
     })
 
+    React.useEffect(function () {
+        fetch('https://api.imgflip.com/get_memes')
+        .then(res => res.json())
+        .then(data => console.log(data))
+    }, [])
+
 
     function getRandomImage() {
         randomEntry = memes[Math.floor(Math.random()*memes.length)]
