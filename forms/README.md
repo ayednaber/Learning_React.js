@@ -29,7 +29,11 @@ export default function Form() {
 
 Every time we enter a letter into our input field, we get a console log of the current value in that field. This is the main difference in React.
 
-There is a concept called **Controlled components**, which basically means that we update our values in state whenever we hit a keystroke inside one of the inputs. The way this is achieved is by adding a value field in the input, which is equal to the current value stored in the state. This can be shown in the code. 
+There is a concept called **Controlled components**, which basically means that we update our values in state whenever we hit a keystroke inside one of the inputs. The way this is achieved is by adding a value field in the input, which is equal to the current value stored in the state. This can be shown in the code.
+
+However, much like forms in regular HTML, we have other types of inputs, such as textarea, radio buttons, checkboxes and more. Thus, this needs to be taken into account when also developing forms in React.
+
+I will add a textarea, and store its value as `comments` in my state. This can be demonstrated in the code.
 
 # Getting Started with Create React App
 

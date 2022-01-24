@@ -4,7 +4,8 @@ export default function Form() {
   const [formData, setformData] = React.useState({
     firstName: "",
     lastName: "",
-    email: ""
+    email: "",
+    comments: ""
   })
 
   console.log(formData)
@@ -16,8 +17,6 @@ export default function Form() {
     }))
   }
 
-
-  
   return (
       <form>
           <input
@@ -40,6 +39,11 @@ export default function Form() {
               onChange={handleChange}
               name="email"
               value={formData.email}
+          />
+          <textarea 
+            onChange={handleChange}
+            value={formData.comments}
+            name="comments"
           />
       </form>
   )
