@@ -191,6 +191,8 @@ Note: We have changed the meme structure from just an `<img>` to be inside a
 div, with an `<img>` and two `<h2>` tags representing the top and bottom text
 respectively.
 
+Now, we want to apply the same functionality that we used for handling change here, in the sense that we want to update the value of the top text and bottom text with every keystroke. So we will implement this using a handleChange function and the `onChange` event listener.
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts

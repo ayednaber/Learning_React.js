@@ -23,20 +23,42 @@ export default function Form() {
         })
     }
 
+    // console.log(memeImage)
+
+    function handleChange(event) {
+        const {name, value} = event.target
+        updateMemeImage(prevMemeImage => ({
+            ...prevMemeImage,
+            [name]: value
+        }))
+    }
+
     
     return (
         <div className="meme-container">
             <div className="meme-form">
                 <div className="input-text">
-                    <input type="text" className="top-text" placeholder="Enter top text..."/>
-                    <input type="text" className="bottom-text" placeholder="Enter bottom text..."/>
+                    <input type="text" className="top-text" placeholder="Enter top text..."
+                        onChange={handleChange}
+                        name="topText"
+                        value={memeImage.topText}
+                    />
+                    <input type="text" className="bottom-text" placeholder="Enter bottom text..."
+                            onChange={handleChange}
+                            name="bottomText"
+                            value={memeImage.bottomText}/>
                 </div>
                 <button onClick={getRandomImage} className="get-meme-button">Get a new meme image <FaImage /></button>
             </div>
             <div className="meme">
                 <img src={memeImage.randomImage} className="meme--image" />
-                <h2 className="meme--text top">One does not simply</h2>
-                <h2 className="meme--text bottom">Walk into Mordor</h2>
+                <h2 
+                    className="meme--text top"
+                >One does not simply</h2>
+                <h2 
+                    className="meme--text bottom"
+                    
+                >Walk into Mordor</h2>
             </div>
         </div>
         
