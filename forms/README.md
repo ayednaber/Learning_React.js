@@ -35,12 +35,28 @@ However, much like forms in regular HTML, we have other types of inputs, such as
 
 I will add a textarea, and store its value as `comments` in my state. This can be demonstrated in the code.
 
+
+#### Checkboxes
+
 As for **checkboxes**, their tag in react is `<input type="checkbox" />`. To keep track of this in our state, instead of using a value property, we will use the `checked` property. We will assign a value of isChecked and set its initial value to true, meaning that the checkbox is not checked initially.
 
 Now that we are checking the `checked` property for our checkbox, as opposed to the `value` property for all other inputs, hence we need to modify our `handleChange()` function to deal with these changes.
 Instead of saying `event.target.name` or `event.target.value`, we can initialize these names at the top relating to `event.target`. Thus, this line of code will address this:
 `const {name, value, type, checked} = event.target`
 
+#### Radio Buttons
+For radio buttons, here we are tracking employment status, and we have three options:
+- Unemployed
+- Part-time
+- Full-time
+
+So, in our state, whenever we select one, we update the string value in the state. Our state will be `employment`.
+
+To each one of our radio inputs, we need to add a name property, and we will set all of their names to be the same, like so: `name: "employment"`. Also, for each value, we will have `value="unemployed"`, `value="part-time"`, `value="full-time"` in each of our radio buttons accordingly.
+
+Much like the same options before, we will use our same `handleChange()` function to listen to the changes happening to these radio buttons.
+
+For radio buttons to be **controlled components**, we cannot use value in the same way that we have using it for other inputs, and also, we cannot use checked in the same way, because checked uses booleans. Instead, we use `checked={formData.employment === "unemployed"}`. What is happening in this code is that we are checking if the employment is unemployed, for the radio input of unemployed, and so on for the rest of them.
 
 # Getting Started with Create React App
 
