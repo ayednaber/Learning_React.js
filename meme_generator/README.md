@@ -182,6 +182,15 @@ What if we have our `<App />` component, which is rendering 5-6 instances of a `
 1- Initialize a local state in the child component, and set its initial value to the `props.state` which was passed with the props to initialize the child component.
 2- Use the `toggle()` method in order to keep all states stored in the parent component, where this toggle method will be created in the parent compoennt and then passed along with props.
 
+
+## Back to Meme Generator
+Now that we have learned about useStates and handleChange and handleSubmit (can be found in the forms react-app), we must apply our knowledge of these
+into our meme generator here in order to successfully complete it.
+
+Note: We have changed the meme structure from just an `<img>` to be inside a
+div, with an `<img>` and two `<h2>` tags representing the top and bottom text
+respectively.
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts

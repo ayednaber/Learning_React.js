@@ -33,7 +33,11 @@ export default function Form() {
                 </div>
                 <button onClick={getRandomImage} className="get-meme-button">Get a new meme image <FaImage /></button>
             </div>
-            <img src={memeImage.randomImage} className="meme-image" />
+            <div className="meme">
+                <img src={memeImage.randomImage} className="meme--image" />
+                <h2 className="meme--text top">One does not simply</h2>
+                <h2 className="meme--text bottom">Walk into Mordor</h2>
+            </div>
         </div>
         
     )
