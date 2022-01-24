@@ -35,6 +35,13 @@ However, much like forms in regular HTML, we have other types of inputs, such as
 
 I will add a textarea, and store its value as `comments` in my state. This can be demonstrated in the code.
 
+As for **checkboxes**, their tag in react is `<input type="checkbox" />`. To keep track of this in our state, instead of using a value property, we will use the `checked` property. We will assign a value of isChecked and set its initial value to true, meaning that the checkbox is not checked initially.
+
+Now that we are checking the `checked` property for our checkbox, as opposed to the `value` property for all other inputs, hence we need to modify our `handleChange()` function to deal with these changes.
+Instead of saying `event.target.name` or `event.target.value`, we can initialize these names at the top relating to `event.target`. Thus, this line of code will address this:
+`const {name, value, type, checked} = event.target`
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
