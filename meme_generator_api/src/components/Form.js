@@ -1,26 +1,32 @@
 import React from "react"
 import { FaImage } from "react-icons/fa"
-import memesData from "../memesData"
+// import memesData from "../memesData"
 
 export default function Form() {
-    const memes = memesData.data.memes
-    let randomEntry = memes[Math.floor(Math.random()*memes.length)]
     const [memeImage, updateMemeImage] = React.useState({
         topText: "",
         bottomText: "",
-        randomImage: "http://i.imgflip.com/1bij.jpg",
-        allMemeImages: memesData
+        randomImage: "http://i.imgflip.com/1bij.jpg"
     })
 
-    React.useEffect(function () {
-        fetch('https://api.imgflip.com/get_memes')
+    
+
+    // Creating another useState to hold all states, which we will
+    // call from an API
+    const [allMemes, setAllMemes] = React.useState([])
+    
+    // console.log(allMemes)
+
+    React.useEffect(() => {
+        fetch("https://api.imgflip.com/get_memes")
         .then(res => res.json())
-        .then(data => console.log(data))
+        .then(data => setAllMemes(data.data.memes))    
     }, [])
 
 
     function getRandomImage() {
-        randomEntry = memes[Math.floor(Math.random()*memes.length)]
+        let randomEntry = allMemes[Math.floor(Math.random()*allMemes.length)]
+
         updateMemeImage(prevMemeImage => {
             return {
                 ...prevMemeImage,
