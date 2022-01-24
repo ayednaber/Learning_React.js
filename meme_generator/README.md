@@ -172,6 +172,16 @@ We will do that by turning our state into an object, with the following properti
 
 Now our functionality works, as in getting random images when clicking on the button, however, every time we refresh, we get the same image that was assigned due to the static URL. Therefore, we will learn next how to save state (aka pass state as props).
 
+### Passing State between Components
+
+In this course, we went over the concept of passing state between components through props. It is important to note that state or data in general
+cannot be passed between two sibling components, where if any data needs to be shared between components, then the it should be raised up a level, and then this data could be passed from the parent component to its children.
+
+What if we have our `<App />` component, which is rendering 5-6 instances of a `<Box />` component, and each of them have the same fields but different values for their properties. If we want each box to have its local state, there are two main ways:
+
+1- Initialize a local state in the child component, and set its initial value to the `props.state` which was passed with the props to initialize the child component.
+2- Use the `toggle()` method in order to keep all states stored in the parent component, where this toggle method will be created in the parent compoennt and then passed along with props.
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
