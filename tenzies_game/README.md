@@ -1,3 +1,10 @@
+# Tenzies Game - Project 4
+
+In this section of the course, I will be combining the skills that I accumulated from the beginning of the course, all the way to using the most recent event listeners and hooks (useState and useEffect), and putting it all into one project.
+
+## Objective of the Game
+There are 10 die in this game, and there is a Roll button. When the die are rolled, all of them get changed into a random number, the user can click on a dice to mark it, which will make it green on the screen. This makes it so that rolling again will not impact these marked die. The objective of the game is to make all the die have the same number. Once that happens, then the user wins, and can restart the game.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
