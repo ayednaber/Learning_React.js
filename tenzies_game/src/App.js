@@ -2,6 +2,9 @@ import React from "react"
 import Die from "./components/Die";
 
 function App() {
+  // State
+  const [dice, setDice] = React.useState(allNewDice())
+
   // Function to generate 10 random numbers for the die
   function allNewDice() {
     const newDie = []
@@ -9,10 +12,16 @@ function App() {
       const newNum = Math.floor(Math.random() * 6 + 1)
       newDie.push(newNum)
     }
-    console.log(newDie)
+    return newDie
   }
 
-  allNewDice()
+  const dieNumbers = dice.map(diceElem => {
+    return (
+      <Die
+        value={diceElem}
+      />
+    )
+  })
   return (
     <main>
       <h1 className="title">Tenzies</h1>
@@ -20,16 +29,7 @@ function App() {
         Click each die to freeze it at its current value between rolls.
       </h4>
       <div className="die">
-        <Die value="1" />
-        <Die value="1" />
-        <Die value="1" />
-        <Die value="1" />
-        <Die value="1" />
-        <Die value="1" />
-        <Die value="1" />
-        <Die value="1" />
-        <Die value="1" />
-        <Die value="1" />
+        {dieNumbers}
       </div>
       <button className="roll">Roll</button>
     </main>
