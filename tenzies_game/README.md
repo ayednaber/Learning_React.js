@@ -35,6 +35,16 @@ Now that we have been able to mark our dice upon clicking it, the next feature
 that we need to work on is making sure that when we roll, the marked die do not get affected. The way I will be doing this is by **updating the `rollDice()` function**. Currently it is just a one-liner, setting the dice array to
 the output of `allNewDice()`, but now, there has to be conditions.
 
+### Winning the Game
+As shown in `App.js`, a state called `tenzies` was added which signifies
+whether or not a user has won the game, and it has been initialized to false.
+We can keep track of changes in the dice array by the `useEffect` hook.
+We will need to constantly check the dice array for winning conditions.
+The conditions:
+- All die have the same value
+- All are held
+
+We will place this functionality inside the useEffect, and our dependency array will be dice.
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

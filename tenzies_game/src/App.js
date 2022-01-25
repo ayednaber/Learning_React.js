@@ -3,8 +3,26 @@ import Die from "./components/Die";
 import { nanoid } from "nanoid";
 
 function App() {
-  // State
+  // State of die arrays
   const [dice, setDice] = React.useState(allNewDice())
+
+  // State of game (indicates if user won or not)
+  const [tenzies, setTenzies] = React.useState(false)
+
+  React.useEffect(() => {
+    let isWon = true
+    const diceValue = dice[0].value
+    for (let i = 0; i < dice.length; i++) {
+      const diceVal = dice[i].value
+      const heldProp = dice[i].isHeld
+      if (!heldProp && diceVal === diceValue) {
+        isWon = false
+        break;
+      }
+    }
+    if (isWon) {
+      console.log("You won!")
+    }}, [dice])
 
   // Function to generate 10 random numbers for the die
   function allNewDice() {
