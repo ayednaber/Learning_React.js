@@ -22,7 +22,21 @@ function App() {
   }
 
   function rollDice() {
-    setDice(allNewDice())
+    const newDie = allNewDice()
+    const newRoll = []
+    for (let i = 0; i < dice.length; i++) {
+      if (dice[i].isHeld) {
+        newRoll.push(dice[i])
+      } else {
+        const newObject = {
+          value: allNewDice()[i].value,
+          isHeld: false,
+          id: nanoid()
+        }
+        newRoll.push(newObject)
+      }
+    }
+    setDice(newRoll)
   }
 
   // function to hold/mark dice

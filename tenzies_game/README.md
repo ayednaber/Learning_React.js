@@ -31,6 +31,10 @@ property to be true, then we will style it accordingly.
 ### Holding/Marking a Dice
 Instead of storing state in each dice component, we will store the state in our parent component `<App />`. We will create a function `holdDice()`.
 
+Now that we have been able to mark our dice upon clicking it, the next feature
+that we need to work on is making sure that when we roll, the marked die do not get affected. The way I will be doing this is by **updating the `rollDice()` function**. Currently it is just a one-liner, setting the dice array to
+the output of `allNewDice()`, but now, there has to be conditions.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
