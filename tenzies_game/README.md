@@ -23,6 +23,11 @@ be a key value, and therefore, since we are not importing data from an API,
 then we can use a dependency called *nanoid*.
 Installed using `npm install nanoid`. This can help generating a random ID for each of our die objects. We assign an id using `id = nanoid()`. As simple as that.
 
+
+### isHeld Conditional Styling
+This feature in our project is important, where whenever we have the `isHeld`
+property to be true, then we will style it accordingly.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

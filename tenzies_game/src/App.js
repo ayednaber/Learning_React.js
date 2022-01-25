@@ -30,6 +30,7 @@ function App() {
       <Die
         key={diceElem.id}
         value={diceElem.value}
+        isHeld={diceElem.isHeld}
       />
     )
   })
