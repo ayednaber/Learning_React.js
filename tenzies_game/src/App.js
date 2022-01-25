@@ -25,12 +25,18 @@ function App() {
     setDice(allNewDice())
   }
 
+  // function to hold/mark dice
+  function holdDice(id) {
+    console.log(id)
+  }
+
   const dieNumbers = dice.map(diceElem => {
     return (
       <Die
         key={diceElem.id}
         value={diceElem.value}
         isHeld={diceElem.isHeld}
+        onClick={() => holdDice(diceElem.id)}
       />
     )
   })

@@ -28,6 +28,9 @@ Installed using `npm install nanoid`. This can help generating a random ID for e
 This feature in our project is important, where whenever we have the `isHeld`
 property to be true, then we will style it accordingly.
 
+### Holding/Marking a Dice
+Instead of storing state in each dice component, we will store the state in our parent component `<App />`. We will create a function `holdDice()`.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

@@ -4,6 +4,9 @@ export default function Die(props) {
     let heldClassName = ""
     props.isHeld ? heldClassName = "dice green" : heldClassName = "dice"
     return (
-        <h3 className={heldClassName}>{props.value}</h3>
+        <h3 
+            className={heldClassName}
+            onClick={props.onClick}    
+        >{props.value}</h3>
     )
 }
