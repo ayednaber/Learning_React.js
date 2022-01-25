@@ -11,6 +11,18 @@ The "Roll" button will have an *onClick event listener*, where whenever it
 is clicked, it will run the `setDice()` function from our useState, and
 assign it to our function `allNewDice()`.
 
+### Changing Die from Integer Array to Objects
+The motive behind this change is that each dice will not only have a number assigned to it, but also, we need to know whether or not it will be **marked**.
+Therefore, this change will be reflected in `App.js`.
+The object will contain the following properties:
+- `value`: which will hold the random number
+- `isHeld`: a boolean value indicating if it is held/marked.
+
+**Problem with Key:** Usually in React, when mapping elements, there must
+be a key value, and therefore, since we are not importing data from an API,
+then we can use a dependency called *nanoid*.
+Installed using `npm install nanoid`. This can help generating a random ID for each of our die objects. We assign an id using `id = nanoid()`. As simple as that.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

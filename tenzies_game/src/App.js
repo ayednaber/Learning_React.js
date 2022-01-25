@@ -1,5 +1,6 @@
 import React from "react"
 import Die from "./components/Die";
+import { nanoid } from "nanoid";
 
 function App() {
   // State
@@ -10,7 +11,12 @@ function App() {
     const newDie = []
     for (let i = 0; i < 10; i++) {
       const newNum = Math.floor(Math.random() * 6 + 1)
-      newDie.push(newNum)
+      newDie.push(
+        {
+          value: newNum,
+          isHeld: false,
+          id: nanoid()
+        })
     }
     return newDie
   }
@@ -22,7 +28,8 @@ function App() {
   const dieNumbers = dice.map(diceElem => {
     return (
       <Die
-        value={diceElem}
+        key={diceElem.id}
+        value={diceElem.value}
       />
     )
   })
