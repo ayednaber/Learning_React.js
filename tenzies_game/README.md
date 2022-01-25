@@ -7,7 +7,9 @@ There are 10 die in this game, and there is a Roll button. When the die are roll
 
 ### Re-rolling the die
 The die numbers are being held in an array, and stored in a **useState**.
-
+The "Roll" button will have an *onClick event listener*, where whenever it
+is clicked, it will run the `setDice()` function from our useState, and
+assign it to our function `allNewDice()`.
 
 # Getting Started with Create React App
 
