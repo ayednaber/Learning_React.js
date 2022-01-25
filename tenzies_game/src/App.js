@@ -27,7 +27,21 @@ function App() {
 
   // function to hold/mark dice
   function holdDice(id) {
-    console.log(id)
+    const newHoldDice = []
+    for (let i = 0; i < dice.length; i++) {
+      const currentDiceId = dice[i].id
+      if (id === currentDiceId) {
+        const dieObject = {
+          id: currentDiceId,
+          value: dice[i].value,
+          isHeld: !(dice[i].isHeld)
+        }
+        newHoldDice.push(dieObject)
+      } else {
+        newHoldDice.push(dice[i])
+      }
+    }
+    setDice(newHoldDice)
   }
 
   const dieNumbers = dice.map(diceElem => {
