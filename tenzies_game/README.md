@@ -45,6 +45,18 @@ The conditions:
 - All are held
 
 We will place this functionality inside the useEffect, and our dependency array will be dice.
+
+There is a really handy function in JavaScript called `.every()`, which can be called on arrays, where basically, we will use to check if every element in the array passes a boolean statement.
+
+When the user wins, then the button text will change togive the user a chance to play again. This is dependent on the `tenzies` state. If `tenzies` is true,
+then we will also render confetti as a fun addition.
+The `<Confetti />` component is rendered as part of the `react-confetti`
+dependency. Install using `npm install react-confetti`.
+
+## After Winning - Starting a New Game
+After the user wins, our game currently just changes the text of the "Roll" button to "Play Again!", however, it does not reset the die. Therefore,
+there are two ways of handling this, either have two buttons, and render one
+of them depending on the circumstances, or modify the rollDice function, which is the approach that we will take.
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

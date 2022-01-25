@@ -1,6 +1,7 @@
 import React from "react"
 import Die from "./components/Die";
 import { nanoid } from "nanoid";
+import Confetti from "react-confetti";
 
 function App() {
   // State of die arrays
@@ -10,19 +11,13 @@ function App() {
   const [tenzies, setTenzies] = React.useState(false)
 
   React.useEffect(() => {
-    let isWon = true
-    const diceValue = dice[0].value
-    for (let i = 0; i < dice.length; i++) {
-      const diceVal = dice[i].value
-      const heldProp = dice[i].isHeld
-      if (!heldProp && diceVal === diceValue) {
-        isWon = false
-        break;
+      const allHeld = dice.every(die => die.isHeld)
+      const firstValue = dice[0].value
+      const allSameValue = dice.every(die => die.value === firstValue)
+      if (allHeld && allSameValue) {
+        setTenzies(true)
       }
-    }
-    if (isWon) {
-      console.log("You won!")
-    }}, [dice])
+    }, [dice])
 
   // Function to generate 10 random numbers for the die
   function allNewDice() {
@@ -39,23 +34,33 @@ function App() {
     return newDie
   }
 
-  function rollDice() {
-    const newDie = allNewDice()
-    const newRoll = []
-    for (let i = 0; i < dice.length; i++) {
-      if (dice[i].isHeld) {
-        newRoll.push(dice[i])
-      } else {
-        const newObject = {
-          value: allNewDice()[i].value,
-          isHeld: false,
-          id: nanoid()
-        }
-        newRoll.push(newObject)
-      }
-    }
-    setDice(newRoll)
+  function newGame() {
+    setDice(allNewDice())
+    setTenzies(false)
   }
+
+  function rollDice() {
+    if (!tenzies) {
+      const newRoll = []
+      for (let i = 0; i < dice.length; i++) {
+        if (dice[i].isHeld) {
+          newRoll.push(dice[i])
+        } else {
+          const newObject = {
+            value: allNewDice()[i].value,
+            isHeld: false,
+            id: nanoid()
+          }
+          newRoll.push(newObject)
+        }
+      }
+      setDice(newRoll)
+      } else {
+        // Here we will handle the case when the player wins and wants to play again
+        setTenzies(false)
+        setDice(allNewDice())
+      }
+  } 
 
   // function to hold/mark dice
   function holdDice(id) {
@@ -95,7 +100,8 @@ function App() {
       <div className="die">
         {dieNumbers}
       </div>
-      <button className="roll" onClick={rollDice}>Roll</button>
+      <button className="roll" onClick={rollDice}>{tenzies ? "Play Again!" : "Roll"}</button>
+      {tenzies && <Confetti />}
     </main>
   );
 }
