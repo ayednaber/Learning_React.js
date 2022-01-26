@@ -10,6 +10,8 @@ function App() {
   // State of game (indicates if user won or not)
   const [tenzies, setTenzies] = React.useState(false)
 
+  const [numRolls, setNumRolls] = React.useState(0)
+
   React.useEffect(() => {
       const allHeld = dice.every(die => die.isHeld)
       const firstValue = dice[0].value
@@ -55,10 +57,12 @@ function App() {
         }
       }
       setDice(newRoll)
+      setNumRolls(prevRolls => prevRolls + 1)
       } else {
         // Here we will handle the case when the player wins and wants to play again
         setTenzies(false)
         setDice(allNewDice())
+        setNumRolls(0)
       }
   } 
 
@@ -102,6 +106,10 @@ function App() {
       </div>
       <button className="roll" onClick={rollDice}>{tenzies ? "Play Again!" : "Roll"}</button>
       {tenzies && <Confetti />}
+      <div className="game-info">
+        <h4 className="numRolls">Number of Rolls: {numRolls}</h4>
+        <h4 className="timer">Time: 00:00</h4>
+      </div>
     </main>
   );
 }

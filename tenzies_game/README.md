@@ -57,6 +57,10 @@ dependency. Install using `npm install react-confetti`.
 After the user wins, our game currently just changes the text of the "Roll" button to "Play Again!", however, it does not reset the die. Therefore,
 there are two ways of handling this, either have two buttons, and render one
 of them depending on the circumstances, or modify the rollDice function, which is the approach that we will take.
+
+## Extra Credit Ideas
+- Adding number of rolls taken to win the game.
+- Timer (to stop when the game is won)
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

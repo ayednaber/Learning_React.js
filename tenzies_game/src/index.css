@@ -87,3 +87,22 @@ code {
 .roll:active {
   box-shadow: inset 5px 5px 10px -3px rgba(0, 0, 0, 0.7);
 }
+
+.game-info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.numRolls {
+  margin-left: 20px;
+  margin-right: 20px;
+  font-weight: 500;
+  font-size: 18px;
+}
+.timer {
+  margin-left: 20px;
+  margin-right: 20px;
+  font-weight: 500;
+  font-size: 18px;
+}
