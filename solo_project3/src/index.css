@@ -51,3 +51,30 @@ code {
 .button-quiz:active {
   box-shadow: 0 0;
 }
+
+.question-text {
+  color: #293264;
+}
+
+.answers {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.ans {
+  padding: 15px;
+  border: 2px solid #4D5B9E;
+  margin-left: 10px;
+  margin-right: 10px;
+  border-radius: 20px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: 15px;
+  color: #293264;
+  text-align: center;
+  cursor: pointer;
+}
+
+.ans:active {
+  background-color: #D6DBF5;
+}
