@@ -58,8 +58,9 @@ function App() {
     return <Start handleClick={start} />
   } else {
     return (
-      <div className="questions">
+      <div className="questions-container">
         {questionElements}
+        <button className="button-quiz check-answers">Check Answers!</button>
       </div>
     )
   }

@@ -52,6 +52,11 @@ code {
   box-shadow: 0 0;
 }
 
+.questions-container {
+  margin-left: 2%;
+  margin-right: 2%;
+}
+
 .question-text {
   color: #293264;
 }
@@ -77,4 +82,13 @@ code {
 
 .ans:active {
   background-color: #D6DBF5;
+}
+
+.check-answers {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  margin-left: 35%;
+  margin-top: 40px;
 }
