@@ -37,11 +37,11 @@ export default class RestaurantsDAO {
             return { restaurantsList: [], totalNumRestaurants: 0}
         }
 
-        const displayCyrsor = cursor.limit(restaurantsPerPage).skip(restaurantsPerPage * page)
+        const displayCursor = cursor.limit(restaurantsPerPage).skip(restaurantsPerPage * page)
 
         try {
-            const restaurantsList = await displayCyrsor.toArray()
-            const totalNumRestaurants = await restaurantsPerPage.countDocuments(query)
+            const restaurantsList = await displayCursor.toArray()
+            const totalNumRestaurants = await restaurants.countDocuments(query)
 
             return { restaurantsList, totalNumRestaurants }
         } catch (e) {
