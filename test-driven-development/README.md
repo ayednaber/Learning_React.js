@@ -9,6 +9,20 @@ We will be using **Jest**, which is a JavaScript testing framework by Facebook.
 
 It can be installed in your react app by running this in the terminal: `npm install --save-dev jest`
 
+We can also use Enzyme, which is a framework by Airbnb, and it can be installed using `npm i --save-dev enzyme enzyme-adapter-react-16`
+
+### Testing
+With our created react app, we already have a file called `App.test.js`, which contains tests. We will use Jest and Enzyme together in order to write test driven development.
+First, I wrote a test that checks whether our the 'a' tag in our App component contains 'Learn React', which passes.
+
+Next, I created a button with an id of increment-btn, and its text is Increment. The way to test if its text is Increment using Jest and Enzyme is by writing the following:
+```
+test("renders a button with text of 'increment'", () => {
+    const wrapper = shallow(<App />);
+    expect(wrapper.find("#increment-btn").text()).toBe("Increment");
+  })
+```
+
 
 
 # Getting Started with Create React App

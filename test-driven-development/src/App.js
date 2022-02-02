@@ -17,6 +17,7 @@ function App() {
         >
           Learn React
         </a>
+        <button id='increment-btn'>Increment</button>
       </header>
     </div>
   );
