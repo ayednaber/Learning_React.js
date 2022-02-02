@@ -29,6 +29,19 @@ Other than just checking if an element contains specific text, the next challeng
 With Enzyme, this becomes very simple, as we can use the `simulate` method, and check for a `click` event, and then check the text of our `#counter-value` to be 1.
 The test will fail at first, because we need to define an `onClick` function for our button inside `App.js`. After including that, then our tests will run successfully.
 
+We also did the same for a decrement button and tested it, and it passes our test.
+
+## CHALLENGE
+Now that we have 5 passing tests in our application, once we run the app using `npm start`, then we notice that if we keep decrementing, we reach negative values.
+Therefore, what I would normally do is just fix that and then test it, **HOWEVER**, this is TDD, therefore I should write a test first, fail it, and then fix the code for it.
+
+I wrote this test, which checks that if I have a zero in my counter, and then click decrement, then thetext after should also be 0. Running the test initially causes it to fail,
+and that is because we have not yet implemented this feature. In my `App.js`, I changed the onClick function to be like so:
+`<button id='decrement-btn' onClick={() => counter !== 0 && setCounter(counter - 1)}>Decrement</button>`
+
+Remember how in JavaScript we can use && to combine functions with boolean statements, as the first one determines whether we will run the second one or not. If the first
+condition fails, then the application will not continue to see what the second condition even is.
+
 
 # Getting Started with Create React App
 

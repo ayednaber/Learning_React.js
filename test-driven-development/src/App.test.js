@@ -28,4 +28,17 @@ describe('Counter Testing', () => {
     expect(wrapper.find("#counter-value").text()).toBe("1");
   });
 
+  test("Render the click event of decrement button and decrement counter value", () => {
+    wrapper.find("#increment-btn").simulate("click");
+    expect(wrapper.find("#counter-value").text()).toBe("1");
+    wrapper.find("#decrement-btn").simulate("click");
+    expect(wrapper.find("#counter-value").text()).toBe("0");
+  });
+
+  test("Render the click event of decrement button make sure 0 is the least value counter can reach", () => {
+    expect(wrapper.find("#counter-value").text()).toBe("0");
+    wrapper.find("#decrement-btn").simulate("click");
+    expect(wrapper.find("#counter-value").text()).toBe("0");
+  });
+
 })
