@@ -11,12 +11,8 @@ describe('Counter Testing', () => {
     wrapper = shallow(<App />)
   })
   
-  test('renders learn react link', () => {
-    // console.log(wrapper.debug())
-    expect(wrapper.find('a').text()).toContain("Learn React");
-    // render(<App />);
-    // const linkElement = screen.getByText(/learn react/i);
-    // expect(linkElement).toBeInTheDocument();
+  test("Renders an h1 that contains 'Counter'", () => {
+    expect(wrapper.find('h1').text()).toContain('Counter');
   });
 
   test("renders a button with text of 'increment'", () => {
@@ -24,7 +20,7 @@ describe('Counter Testing', () => {
   });
 
   test("render the initial value of state in a div", () => {
-    expect(wrapper.find('#counter-value').text()).toBe(0);
-  })
+    expect(wrapper.find('#counter-value').text()).toBe("0");
+  });
 
 })
