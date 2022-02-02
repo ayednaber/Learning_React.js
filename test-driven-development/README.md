@@ -23,6 +23,11 @@ test("renders a button with text of 'increment'", () => {
   })
 ```
 
+Other than just checking if an element contains specific text, the next challenge comes by testing if the increment button **triggers the click event listener** and
+**increments the counter value**.
+
+With Enzyme, this becomes very simple, as we can use the `simulate` method, and check for a `click` event, and then check the text of our `#counter-value` to be 1.
+The test will fail at first, because we need to define an `onClick` function for our button inside `App.js`. After including that, then our tests will run successfully.
 
 
 # Getting Started with Create React App
