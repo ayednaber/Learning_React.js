@@ -1,8 +1,8 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,700');
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: 'Poppins', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -10,4 +10,67 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.country {
+  font-weight: bold;
+}
+
+.name-and-photo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flag {
+  width: 40px;
+  margin-right: 10px;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #4f7be0;
+}
+
+.university {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+.globe {
+  color: white;
+  height: 40px;
+}
+
+.navbar-text {
+  color: white;
+  margin-left: 10px;
+}
+
+.search-div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.university-name {
+  padding: 10px;
+  border-radius: 10px;
+  margin-right: 3px;
+}
+
+.university-button {
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.hr {
+  margin-top: 30px;
+  margin-left: 40px;
+  margin-right: 40px;
 }
